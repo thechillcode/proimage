@@ -1,0 +1,20 @@
+Effects:
+
+namespace imgeffects
+{
+
+unsigned char* <funcname>(unsigned char* pBuff, unsigned int width, unsigned int height, unsigned int bpp, ...);
+
+}
+
+returns a new pointer
+
+
+namespace imgeffects
+{
+
+void <funcname>_update(unsigned char* pBuff, unsigned int width, unsigned int height, unsigned int bpp, ...);
+
+}
+
+work on the existing passed buffer
