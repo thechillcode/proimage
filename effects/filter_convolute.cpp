@@ -12,8 +12,6 @@ namespace imgeffects
 
 ConvolutionMatrix::ConvolutionMatrix()
 {
-	pMatrixData = 0;
-	matrices = 0;
 }
 ConvolutionMatrix::~ConvolutionMatrix()
 {
@@ -22,46 +20,44 @@ ConvolutionMatrix::~ConvolutionMatrix()
 
 void ConvolutionMatrix::clear()
 {
-	if (pMatrixData)
+	for (size_t i = 0; i < num_matrices(); i++)
 	{
-		for (unsigned int i = 0; i<matrices; i++)
-		{
-			delete[] pMatrixData[i].pData;
-		}
-		free((void*)pMatrixData);
+		delete[] MatrixData[i].pData;
 	}
-	pMatrixData = 0;
-	matrices = 0;
+	MatrixData.clear();
+}
+
+size_t ConvolutionMatrix::num_matrices()
+{
+	return MatrixData.size();
+}
+
+ConvolutionMatrix::ConvolutionMatrixData* ConvolutionMatrix::get_matrix(size_t pos)
+{
+	if (pos < num_matrices())
+	{
+		return &(MatrixData[pos]);
+	}
+	return NULL;
 }
 
 void ConvolutionMatrix::add(int* pData, unsigned int width, unsigned int height, int divisor, int offset)
 {
-	matrices++;
-	pMatrixData = (ConvolutionMatrixData*)realloc((void*)pMatrixData, sizeof(ConvolutionMatrixData)*matrices);
-	unsigned int pos = matrices-1;
+
 	size_t len = size_t(width)*height;
-	pMatrixData[pos].pData = new int[len];
-	memcpy(pMatrixData[pos].pData, pData, len*4);
-	pMatrixData[pos].width = width;
-	pMatrixData[pos].height = height;
-	pMatrixData[pos].divisor = divisor;
-	pMatrixData[pos].offset = offset;
+	int* p = new int[len];
+	memcpy(p, pData, len*4);
+	MatrixData.push_back({ p, width, height, divisor, offset });
 }
 
-void ConvolutionMatrix::remove(unsigned int pos)
+void ConvolutionMatrix::remove(size_t pos)
 {
-	if (pos < matrices)
+	if (pos < num_matrices())
 	{
-		delete[] pMatrixData[pos].pData;
-		for (unsigned int i=pos+1; i<matrices; i++)
-		{
-			pMatrixData[i-1] = pMatrixData[i];
-		}
-		matrices--;
-		pMatrixData = (ConvolutionMatrixData*)realloc((void*)pMatrixData, sizeof(ConvolutionMatrixData)*matrices);
+		delete[] MatrixData[pos].pData;
+		MatrixData.erase(MatrixData.begin() + pos);
 	}
 }
-
 
 unsigned char* convolute(unsigned char* pBuff, unsigned int width, unsigned int height, unsigned int bpp, ConvolutionMatrix*  ConvMatrix)
 {

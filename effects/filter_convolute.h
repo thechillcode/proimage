@@ -8,7 +8,9 @@
 #define __FILTER_CONVOLUTE__
 
 #include "EFFECTS_DEFINES.h"
+#include <vector>
 #include <memory>
+
 
 namespace imgeffects
 {
@@ -18,6 +20,7 @@ namespace imgeffects
 \*----------------------------------------*/
 class ConvolutionMatrix
 {
+
 public:
 	// Convolution Matrix Struct
 	struct ConvolutionMatrixData
@@ -29,15 +32,19 @@ public:
 		int offset;
 	};
 
+private:
+	std::vector<ConvolutionMatrixData> MatrixData;
+
+public:
 	ConvolutionMatrix();
 	~ConvolutionMatrix();
 
-	ConvolutionMatrixData* pMatrixData;
-	unsigned int matrices;
+	size_t num_matrices();
 
+	ConvolutionMatrixData* get_matrix(size_t pos);
 	void clear();
 	void add(int* pData, unsigned int width, unsigned int height, int divisor, int offset);
-	void remove(unsigned int pos);
+	void remove(size_t pos);
 };
 
 /*----------------------------------------*\
@@ -183,18 +190,18 @@ T_return* apply_convolution_matrix_T(T* pBuff, unsigned int width, unsigned int 
 template <typename T>
 int* convolute_raw_T(T* pBuff, unsigned int width, unsigned int height, ConvolutionMatrix*  ConvMatrix)
 {
-	if (ConvMatrix->matrices == 0)
+	if (ConvMatrix->num_matrices() == 0)
 		return 0;
 
 	// Get First Matrix Buffer
-	ConvolutionMatrix::ConvolutionMatrixData* matrix = &(ConvMatrix->pMatrixData[0]);
+	ConvolutionMatrix::ConvolutionMatrixData* matrix = ConvMatrix->get_matrix(0);
 
 	int* pBuffOut = apply_convolution_matrix_T<T, int>(pBuff, width, height, matrix);
 
 	// Apply Additional Matrices
-	for (unsigned int i = 1; i<ConvMatrix->matrices; i++)
+	for (unsigned int i = 1; i < ConvMatrix->num_matrices(); i++)
 	{
-		matrix = &(ConvMatrix->pMatrixData[i]);
+		matrix = ConvMatrix->get_matrix(i);
 		int* pBuffOut2 = apply_convolution_matrix_T<int, int>(pBuffOut, width, height, matrix);
 		delete pBuffOut;
 		pBuffOut = pBuffOut2;
