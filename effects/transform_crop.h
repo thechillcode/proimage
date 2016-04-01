@@ -9,7 +9,7 @@
 
 #include <memory>
 
-namespace imgeffects
+namespace proimage
 {
 
 	/*----------------------------------------*\
@@ -51,6 +51,6 @@ namespace imgeffects
 		return newimg;
 	}
 
-} // namespace imgeffects
+} // namespace proimage
 
 #endif // #ifndef __EFFECTCROP_H__

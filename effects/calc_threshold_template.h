@@ -9,7 +9,7 @@
 
 #include <memory>
 
-namespace imgeffects
+namespace proimage
 {
 
 /*----------------------------------------*\

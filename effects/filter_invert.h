@@ -7,7 +7,7 @@
 #ifndef __EFFECT_INVERTIMAGE_H__
 #define __EFFECT_INVERTIMAGE_H__
 
-namespace imgeffects
+namespace proimage
 {
 
 /*--------------------------------------------------------------------------------*\
@@ -20,6 +20,6 @@ unsigned char* invert(unsigned char* data, unsigned int width, unsigned int heig
 
 void invert_update(unsigned char* data, unsigned int width, unsigned int height, unsigned int bpp);
 
-} // namespace imgeffects
+} // namespace proimage
 
 #endif // #ifndef __EFFECT_INVERTIMAGE_H__

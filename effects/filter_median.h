@@ -7,7 +7,7 @@
 #ifndef __FILTER_MEDIAN__
 #define __FILTER_MEDIAN__
 
-namespace imgeffects
+namespace proimage
 {
 
 /*--------------------------------------------------------------------------------*\
@@ -18,6 +18,6 @@ namespace imgeffects
 unsigned char* median_filter (unsigned char* data, unsigned int width, unsigned int height, unsigned int bpp, unsigned int radius);
 
 
-} // namespace imgeffects
+} // namespace proimage
 
 #endif // #ifndef __FILTER_MEDIAN__

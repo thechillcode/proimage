@@ -4,7 +4,7 @@
 
 #include "filter_invert.h"
 
-namespace imgeffects
+namespace proimage
 {
 
 	template <class T>

@@ -7,7 +7,7 @@
 #include "filter_convolute.h"
 #include "calc_gauss_kernel.h"
 
-namespace imgeffects
+namespace proimage
 {
 
 unsigned char* sharpen_gauss(unsigned char* pBuff, unsigned int width, unsigned int height, unsigned int bpp, int radius, double sigma)

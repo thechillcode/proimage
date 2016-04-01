@@ -7,7 +7,7 @@
 #ifndef __CALC_BILINEAR__
 #define __CALC_BILINEAR__
 
-namespace imgeffects
+namespace proimage
 {
 
 	/*--------------------------------------------------------------------------------*\
@@ -64,7 +64,7 @@ namespace imgeffects
 		return (T)(val + 0.5);
 	}
 
-} // namespace imgeffects
+} // namespace proimage
 
 
 #endif // #ifndef __CALC_BILINEAR__

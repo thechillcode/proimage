@@ -7,7 +7,7 @@
 #ifndef __Algorithm_AlignImage_H__
 #define __Algorithm_AlignImage_H__
 
-namespace imgeffects
+namespace proimage
 {
 
 /*----------------------------------------*\

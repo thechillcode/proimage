@@ -5,7 +5,7 @@
 #include "transform_crop.h"
 #include <memory>
 
-namespace imgeffects
+namespace proimage
 {
 
 unsigned char* crop(unsigned char* Data, unsigned int width, unsigned int height, unsigned int bpp, unsigned int x, unsigned int y, unsigned int w, unsigned int h)

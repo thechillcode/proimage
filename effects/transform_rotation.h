@@ -10,7 +10,7 @@
 #ifndef __TRANSFORM_ROTATION__
 #define __TRANSFORM_ROTATION__
 
-namespace imgeffects
+namespace proimage
 {
 
 /*----------------------------------------*\

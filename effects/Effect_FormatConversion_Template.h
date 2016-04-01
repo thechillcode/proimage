@@ -9,7 +9,7 @@
 
 #include "Effect_FormatConversion_Definitions.h"
 
-namespace imgeffects
+namespace proimage
 {
 
 /*----------------------------------------*\
@@ -89,6 +89,6 @@ T* convert_grayscale_to_monochrome_T(T* pGray, unsigned int width, unsigned int 
 	return pMono;
 }
 
-} // namespace imgeffects
+} // namespace proimage
 
 #endif // #ifndef __EFFECT_FORMATCONVERSION_TEMPLATE_H__

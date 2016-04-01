@@ -17,7 +17,7 @@ Info text
 #define _USE_MATH_DEFINES
 #include <math.h>
 
-namespace imgeffects
+namespace proimage
 {
 	unsigned char* shear_x(unsigned char* pBuff, unsigned int width, unsigned int height, unsigned int bpp, double shear_x, unsigned int* new_width, unsigned int* new_height)
 	{
@@ -33,4 +33,4 @@ namespace imgeffects
 		return transform(pBuff, width, height, bpp, &tm, new_width, new_height);
 	}
 
-} // namespace imgeffects
+} // namespace proimage

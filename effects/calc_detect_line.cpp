@@ -11,7 +11,7 @@
 #define ABSDIFF(a,b) (a < b ? (b-a) : (a-b))
 #define ROUNDUINT(x) unsigned int(x + 0.5)
 
-namespace imgeffects
+namespace proimage
 {
 
 /**********************************************************************************\

@@ -7,7 +7,7 @@
 #ifndef __FILTER_NORMALIZE__
 #define __FILTER_NORMALIZE__
 
-namespace imgeffects
+namespace proimage
 {
 
 /*----------------------------------------*\

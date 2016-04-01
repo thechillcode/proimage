@@ -7,7 +7,7 @@ Alogrithm Otzu, to detect Gray Threshold
 #include "calc_threshold.h"
 #include "calc_threshold_template.h"
 
-namespace imgeffects
+namespace proimage
 {
 
 	/*----------------------------------------*\
@@ -31,4 +31,4 @@ namespace imgeffects
 		return -1;
 	}
 
-} // namespace imgeffects
+} // namespace proimage

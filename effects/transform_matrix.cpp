@@ -13,7 +13,7 @@ Info text
 #include "calc_bilinear.h"
 #include <memory>
 
-namespace imgeffects
+namespace proimage
 {
 	template<typename T>
 	T* transform_T(T* pBuff, unsigned int width, unsigned int height, double invmx[3][3], T* pout, unsigned int new_width, unsigned int new_height)
@@ -50,8 +50,8 @@ namespace imgeffects
 
 		// add offset translation to invmatrix append
 		double inv_trans[3][3] = {
-			{ 1, 0, offset_x },
-			{ 0, 1, offset_y },
+			{ 1, 0, (double)offset_x },
+			{ 0, 1, (double)offset_y },
 			{ 0, 0, 1 },
 		};
 		double invers[3][3] = { 0 };

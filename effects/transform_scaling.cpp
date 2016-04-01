@@ -13,7 +13,7 @@ Info text
 #include "transform_scaling.h"
 #include "transform_matrix.h"
 
-namespace imgeffects
+namespace proimage
 {
 	unsigned char* scale(unsigned char* pBuff, unsigned int width, unsigned int height, unsigned int bpp, double fact_x, double fact_y, unsigned int* new_width, unsigned int* new_height)
 	{
@@ -22,4 +22,4 @@ namespace imgeffects
 		return transform(pBuff, width, height, bpp, &tm, new_width, new_height);
 	}
 
-} // namespace imgeffects
+} // namespace proimage

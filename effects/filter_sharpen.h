@@ -5,7 +5,7 @@
 #ifndef __FILTER_SHARPEN__
 #define __FILTER_SHARPEN__
 
-namespace imgeffects
+namespace proimage
 {
 /*--------------------------------------------------------------------------------*\
 	unsigned char* sharpen_gauss(unsigned char* pBuff, unsigned int width, unsigned int height, unsigned int bpp, double sharpsigma, int sharpwidth)

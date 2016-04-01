@@ -6,7 +6,7 @@
 
 #include <algorithm>
 
-namespace imgeffects
+namespace proimage
 {
 
 	template <class T>
@@ -78,4 +78,4 @@ T* median_filter_T(T* data, unsigned int width, unsigned int height, unsigned in
 }
 
 
-} // namespace imgeffects
+} // namespace proimage

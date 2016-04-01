@@ -7,7 +7,7 @@
 
 #include "TransformMatrix.h"
 
-namespace imgeffects
+namespace proimage
 {
 	/*--------------------------------------------------------------------------------*\
 	unsigned char*  transform(unsigned char* pBuff, unsigned int width, unsigned int height, unsigned int bpp, TransformMatrix* tm, unsigned int* new_width, unsigned int* new_height)

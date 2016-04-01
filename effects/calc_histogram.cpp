@@ -5,7 +5,7 @@
 #include "calc_histogram.h"
 #include "calc_histogram_template.h"
 
-namespace imgeffects
+namespace proimage
 {
 
 	size_t* calc_histogram(unsigned char* buffer, unsigned int width, unsigned int height, unsigned int bpp, size_t* entries)
@@ -43,4 +43,4 @@ namespace imgeffects
 		}
 		return 0;
 	}
-} // namespace imgeffects
+} // namespace proimage

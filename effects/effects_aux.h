@@ -2,7 +2,7 @@
 #ifndef __EFFECTS_AUX__
 #define __EFFECTS_AUX__
 
-namespace imgeffects
+namespace proimage
 {
 
 }

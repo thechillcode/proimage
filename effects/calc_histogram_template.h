@@ -7,7 +7,7 @@
 
 #include <memory>
 
-namespace imgeffects
+namespace proimage
 {
 	template <class T>
 	size_t* calc_histogram_T(T* buffer, unsigned int width, unsigned int height, size_t* entries)
@@ -73,6 +73,6 @@ namespace imgeffects
 		return histo;
 	}
 
-} // namespace imgeffects
+} // namespace proimage
 
 #endif // #ifndef __CALC_HISTORGRAM_TEMPLATE__

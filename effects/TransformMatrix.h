@@ -5,7 +5,7 @@
 #ifndef __TRANSFORM_MATRIX__
 #define __TRANSFORM_MATRIX__
 
-namespace imgeffects
+namespace proimage
 {
 	class TransformMatrix
 	{

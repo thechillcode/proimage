@@ -5,7 +5,7 @@
 #ifndef __EFFECT_EDGEDETECTION_H__
 #define __EFFECT_EDGEDETECTION_H__
 
-namespace imgeffects
+namespace proimage
 {
 
 /*----------------------------------------*\

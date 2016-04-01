@@ -8,7 +8,7 @@
 #include "Effect_FormatConversion_Template.h"
 #include "Effect_FormatConversion_Definitions.h"
 
-namespace imgeffects
+namespace proimage
 {
 
 	unsigned char* convert_rgb_to_gray(unsigned char* pRed, unsigned char* pGreen, unsigned char* pBlue, unsigned int width, unsigned int height, unsigned int bpp)

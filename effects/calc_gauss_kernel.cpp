@@ -8,7 +8,7 @@
 #define _USE_MATH_DEFINES
 #include <cmath>
 
-namespace imgeffects
+namespace proimage
 {
 
 double gauss_get_sigma_from_radius(int radius)
@@ -71,4 +71,4 @@ double* gauss_get_kernel(double sigma, int width, double* sum)
 	return iG_1D;
 }
 
-} // namespace imgeffects
+} // namespace proimage

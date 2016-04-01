@@ -7,7 +7,7 @@
 #ifndef __EFFECT_BLUR_H__
 #define __EFFECT_BLUR_H__
 
-namespace imgeffects
+namespace proimage
 {
 
 	/*----------------------------------------*\

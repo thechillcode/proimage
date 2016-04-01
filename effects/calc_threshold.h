@@ -4,7 +4,7 @@
 	Alogrithm Otzu, to detect Gray Threshold
 \**********************************************************************************/
 
-namespace imgeffects
+namespace proimage
 {
 
 /*----------------------------------------*\

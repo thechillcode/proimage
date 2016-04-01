@@ -10,7 +10,7 @@
 #include "constrain.h"
 #include <cmath>
 
-namespace imgeffects
+namespace proimage
 {
 
 /*----------------------------------------*\

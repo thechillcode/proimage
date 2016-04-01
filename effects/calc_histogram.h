@@ -5,7 +5,7 @@
 #ifndef __CALC_HISTORGRAM__
 #define __CALC_HISTORGRAM__
 
-namespace imgeffects
+namespace proimage
 {
 	/*--------------------------------------------------------------------------------*\
 	size_t* calc_histogram(unsigned char* buffer, unsigned int width, unsigned int height, unsigned int bpp, size_t* entries)

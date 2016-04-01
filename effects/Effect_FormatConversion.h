@@ -7,7 +7,7 @@
 #ifndef __EFFECT_FORMATCONVERSION_H__
 #define __EFFECT_FORMATCONVERSION_H__
 
-namespace imgeffects
+namespace proimage
 {
 
 	/*--------------------------------------------------------------------------------*\

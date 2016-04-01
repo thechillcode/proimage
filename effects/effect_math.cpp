@@ -4,7 +4,7 @@
 
 #include "effect_math.h"
 
-namespace imgeffects
+namespace proimage
 {
 	unsigned char* math_sum(unsigned char* Buff1, unsigned char* Buff2, unsigned int width, unsigned int height, unsigned int bpp)
 	{

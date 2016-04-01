@@ -7,7 +7,7 @@
 #ifndef __CALC_GAUSS_KERNEL__
 #define __CALC_GAUSS_KERNEL__
 
-namespace imgeffects
+namespace proimage
 {
 
 /*--------------------------------------------------------------------------------*\
@@ -37,6 +37,6 @@ int* gauss_get_kernel(double sigma, int width, int* sum);
 \*--------------------------------------------------------------------------------*/
 double* gauss_get_kernel(double sigma, int width, double* sum);
 
-} // namespace imgeffects
+} // namespace proimage
 
 #endif // #ifndef __CALC_GAUSS_KERNEL__

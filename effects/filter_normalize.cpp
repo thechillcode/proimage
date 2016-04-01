@@ -5,7 +5,7 @@
 #include "filter_normalize.h"
 #include <memory>
 
-namespace imgeffects
+namespace proimage
 {
 
 	template <class T>

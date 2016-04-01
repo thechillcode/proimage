@@ -6,7 +6,7 @@
 #include "filter_convolute.h"
 #include "effect_math.h"
 
-namespace imgeffects
+namespace proimage
 {
 
 /*----------------------------------------*\

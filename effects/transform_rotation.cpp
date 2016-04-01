@@ -9,7 +9,7 @@
 #include "transform_rotation.h"
 #include "EFFECTS_DEFINES.h"
 
-namespace imgeffects
+namespace proimage
 {
 
 	/*----------------------------------------*\

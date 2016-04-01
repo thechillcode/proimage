@@ -7,7 +7,7 @@
 #include "filter_convolute.h"
 #include <malloc.h>
 
-namespace imgeffects
+namespace proimage
 {
 
 ConvolutionMatrix::ConvolutionMatrix()
